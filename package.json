@@ -1,6 +1,6 @@
 {
   "name": "sistema-clinica-scrumwise",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sistema web para clínica médica - Trabalho 7 de Engenharia de Software",
   "main": "server.js",
   "scripts": {
@@ -22,5 +22,8 @@
     "sqlite"
   ],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": "20.x"
+  }
 }

@@ -84,3 +84,23 @@ sistema_clinica_scrumwise/
 ## Observação
 
 O banco de dados SQLite é criado automaticamente na primeira execução.
+
+
+## Deploy no Render
+
+Configurações recomendadas:
+
+```text
+Build Command: npm install
+Start Command: npm start
+Environment: Node
+NODE_VERSION: 20
+```
+
+O arquivo `database.js` cria automaticamente a pasta `data/` antes de abrir o banco SQLite. Isso evita o erro:
+
+```text
+Cannot open database because the directory does not exist
+```
+
+Observação: no plano gratuito do Render, o banco SQLite pode ser perdido em novos deploys ou reinicializações, pois o armazenamento local não é permanente. Para um trabalho acadêmico/demonstração, funciona. Para uso real, o ideal seria usar PostgreSQL.

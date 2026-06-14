@@ -1,7 +1,16 @@
 const Database = require("better-sqlite3");
 const path = require("path");
+const fs = require("fs");
 
-const dbPath = path.join(__dirname, "data", "clinica.db");
+const dataDir = path.join(__dirname, "data");
+
+// No Render, a pasta data pode não existir após o deploy.
+// Por isso ela precisa ser criada antes de abrir o banco SQLite.
+if (!fs.existsSync(dataDir)) {
+  fs.mkdirSync(dataDir, { recursive: true });
+}
+
+const dbPath = path.join(dataDir, "clinica.db");
 const db = new Database(dbPath);
 
 db.pragma("foreign_keys = ON");
