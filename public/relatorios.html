@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Relatórios</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header><h1>Relatórios Simples</h1></header>
+  <nav>
+    <a href="/">Início</a>
+    <a href="/pacientes.html">Pacientes</a>
+    <a href="/especialidades.html">Especialidades</a>
+    <a href="/medicos.html">Médicos</a>
+    <a href="/agendamentos.html">Agendamentos</a>
+    <a href="/agenda.html">Agenda</a>
+    <a href="/relatorios.html">Relatórios</a>
+  </nav>
+  <main class="container">
+    <h2>Resumo Geral</h2>
+    <div class="card-grid">
+      <div class="card">Pacientes <strong id="totalPacientes">0</strong></div>
+      <div class="card">Médicos <strong id="totalMedicos">0</strong></div>
+      <div class="card">Especialidades <strong id="totalEspecialidades">0</strong></div>
+      <div class="card">Consultas <strong id="totalConsultas">0</strong></div>
+    </div>
+
+    <h2>Filtro de Consultas</h2>
+    <form id="formRelatorio">
+      <div><label>Início<input type="date" id="inicio"></label></div>
+      <div><label>Fim<input type="date" id="fim"></label></div>
+      <div><label>Médico<select id="medico_id"></select></label></div>
+      <div>
+        <label>Status
+          <select id="status">
+            <option value="">Todos</option>
+            <option>Agendada</option>
+            <option>Realizada</option>
+            <option>Cancelada</option>
+            <option>Remarcada</option>
+          </select>
+        </label>
+      </div>
+      <div><label>&nbsp;<button type="submit">Gerar relatório</button></label></div>
+    </form>
+
+    <h2>Consultas Encontradas</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th><th>Hora</th><th>Paciente</th><th>Médico</th><th>Especialidade</th><th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="listaConsultas"></tbody>
+      </table>
+    </div>
+
+    <h2>Consultas por Status</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>Status</th><th>Total</th></tr></thead>
+        <tbody id="listaStatus"></tbody>
+      </table>
+    </div>
+
+    <h2>Consultas por Médico</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>Médico</th><th>Total</th></tr></thead>
+        <tbody id="listaMedicos"></tbody>
+      </table>
+    </div>
+  </main>
+  <script src="/js/api.js"></script>
+  <script src="/js/relatorios.js"></script>
+</body>
+</html>

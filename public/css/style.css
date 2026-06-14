@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
+
+header {
+  background: #1f4e79;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  background: #153957;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 18px;
+  display: block;
+}
+
+nav a:hover {
+  background: #2d6f9f;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 25px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+}
+
+h1, h2, h3 {
+  color: #1f4e79;
+}
+
+header h1 {
+  color: white;
+  margin: 0;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #eef5fb;
+  border-left: 5px solid #1f4e79;
+  padding: 18px;
+  border-radius: 6px;
+}
+
+.card strong {
+  font-size: 28px;
+  display: block;
+  margin-top: 8px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+  margin-bottom: 24px;
+  background: #f8fafc;
+  padding: 18px;
+  border-radius: 6px;
+  border: 1px solid #d9e2ec;
+}
+
+label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input, select, textarea, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #bcccdc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+textarea {
+  min-height: 42px;
+}
+
+button {
+  cursor: pointer;
+  background: #1f4e79;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #2d6f9f;
+}
+
+.btn-danger {
+  background: #a83232;
+}
+
+.btn-danger:hover {
+  background: #c13e3e;
+}
+
+.btn-secondary {
+  background: #5f6c72;
+}
+
+.btn-secondary:hover {
+  background: #717f86;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+}
+
+th, td {
+  border: 1px solid #d9e2ec;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background: #1f4e79;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+}
+
+.actions button {
+  padding: 7px;
+  font-size: 12px;
+}
+
+.message {
+  padding: 10px;
+  margin-bottom: 14px;
+  border-radius: 4px;
+  display: none;
+}
+
+.message.ok {
+  background: #dff0d8;
+  color: #245724;
+  display: block;
+}
+
+.message.error {
+  background: #f8d7da;
+  color: #721c24;
+  display: block;
+}
+
+.footer-note {
+  color: #667;
+  font-size: 14px;
+  margin-top: 30px;
+}

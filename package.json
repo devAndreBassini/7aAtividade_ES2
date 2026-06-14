@@ -1,0 +1,26 @@
+{
+  "name": "sistema-clinica-scrumwise",
+  "version": "1.0.0",
+  "description": "Sistema web para clínica médica - Trabalho 7 de Engenharia de Software",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "keywords": [
+    "engenharia-de-software",
+    "scrum",
+    "clinica-medica",
+    "node",
+    "sqlite"
+  ],
+  "author": "",
+  "license": "MIT"
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Agendamentos</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header><h1>Agendamento de Consultas</h1></header>
+  <nav>
+    <a href="/">Início</a>
+    <a href="/pacientes.html">Pacientes</a>
+    <a href="/especialidades.html">Especialidades</a>
+    <a href="/medicos.html">Médicos</a>
+    <a href="/agendamentos.html">Agendamentos</a>
+    <a href="/agenda.html">Agenda</a>
+    <a href="/relatorios.html">Relatórios</a>
+  </nav>
+  <main class="container">
+    <h2>Agendamentos</h2>
+    <div id="msg" class="message"></div>
+
+    <form id="formConsulta">
+      <div><label>Paciente<select id="paciente_id" required></select></label></div>
+      <div><label>Médico<select id="medico_id" required></select></label></div>
+      <div><label>Data<input id="data_consulta" type="date" required></label></div>
+      <div><label>Hora<input id="hora_consulta" type="time" required></label></div>
+      <div><label>Observações<textarea id="observacoes"></textarea></label></div>
+      <div><label>&nbsp;<button type="submit">Agendar</button></label></div>
+    </form>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th><th>Hora</th><th>Paciente</th><th>Médico</th><th>Especialidade</th><th>Status</th><th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="lista"></tbody>
+      </table>
+    </div>
+  </main>
+  <script src="/js/api.js"></script>
+  <script src="/js/agendamentos.js"></script>
+</body>
+</html>
